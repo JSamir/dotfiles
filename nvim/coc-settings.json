@@ -1,0 +1,35 @@
+{
+    "http.proxy": "http://HE112113.emea1.cds.t-internal.com:8080",
+    "http.proxyStrictSSL": false,
+
+    "java.home": "/home/samir/.local/share/sdkman/candidates/java/15.0.1-zulu",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "/home/samir/.local/share/sdkman/candidates/java/8.0.282-zulu",
+            "default": true
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "/home/samir/.local/share/sdkman/candidates/java/11.0.9-zulu"
+        }
+    ],
+    "java.configuration.maven.userSettings": "/home/samir/.config/maven/settings.xml",
+
+    "groovy.java.home": "~/.local/share/sdkman/candidates/java/11.0.9-zulu",
+
+    "languageserver": {
+        "bash" : {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        },
+        "dockerfile": {
+            "command": "docker-langserver",
+            "filetypes": ["dockerfile"],
+            "args": ["--stdio"]
+        }
+    }
+}
+

@@ -23,7 +23,7 @@ zstyle ':z4h:autosuggestions' forward-char     'accept'
 
 # Send these files over to the remote host when connecting over ssh.
 # Multiple files can be listed here.
-#zstyle ':z4h:ssh:*'           send-extra-files '~/.iterm2_shell_integration.zsh'
+#zstyle ':z4h:ssh:*'           send-extra-files '~/.sterm2_shell_integration.zsh'
 
 # Disable automatic teleportation of z4h over ssh when connecting to some-host.
 # This makes `ssh some-host` equivalent to `command ssh some-host`.
@@ -55,6 +55,7 @@ z4h init || return
 WORDCHARS=""
 
 # Export environment variables.
+export LANG=en_US.UTF-8
 export GPG_TTY=$TTY
 export BROWSER=firefox
 export EDITOR=nvim
@@ -87,7 +88,8 @@ export KEYTIMEOUT=5
 #fpath+=($Z4H/ohmyzsh/ohmyzsh/plugins/supervisor)
 
 # Source additional local files if they exist.
-#z4h source ~/.iterm2_shell_integration.zsh
+z4h source /usr/share/LS_COLORS/dircolors.sh
+z4h source ~/.local/share/sdkman/bin/sdkman-init.sh
 
 # Define key bindings.
 # bind keys to accept a suggestion and accept only a 'word'
@@ -144,6 +146,7 @@ alias sv='sudo nvim'
 alias vim='nvim'
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias mvnd="mvnd -gs $XDG_CONFIG_HOME/maven/settings.xml"
+alias docker="docker --config ~/.config/docker"
 
 alias cdeproxy-on='ssh -fN lindev-proxy'
 alias cdeproxy-check='ssh -O check lindev-proxy'
@@ -156,4 +159,4 @@ setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "/home/samir/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "/home/samir/.local/share/sdkman/bin/sdkman-init.sh"
+#[[ -s "/home/samir/.local/share/sdkman/bin/sdkman-init.sh" ]] && source "/home/samir/.local/share/sdkman/bin/sdkman-init.sh"
