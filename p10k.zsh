@@ -32,6 +32,7 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     # os_icon               # os identifier
+    background_jobs
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
@@ -48,7 +49,7 @@
     # =========================[ Line #1 ]=========================
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
-    background_jobs         # presence of background jobs
+    #background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
     #asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     #virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
@@ -90,7 +91,7 @@
     #midnight_commander      # midnight commander shell (https://midnight-commander.org/)
     #nix_shell               # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
     # vpn_ip                # virtual private network indicator
-    load                  # CPU load
+    #load                  # CPU load
     # disk_usage            # disk usage
     # ram                   # free RAM
     # swap                  # used swap

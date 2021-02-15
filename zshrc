@@ -67,6 +67,7 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 export HISTFILE="${XDG_DATA_HOME}"/zsh/zsh_history
 export SDKMAN_DIR="/home/samir/.local/share/sdkman"
+export PSQLRC="/home/samir/.config/psqlrc"
 
 # Extend PATH.
 path=(~/bin $path)
@@ -145,7 +146,7 @@ alias v='nvim'
 alias sv='sudo nvim'
 alias vim='nvim'
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
-alias mvnd="mvnd -gs $XDG_CONFIG_HOME/maven/settings.xml"
+alias mvnd="mvnd -Dmvnd.daemonStorage=$XDG_CONFIG_HOME/mvnd -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias docker="docker --config ~/.config/docker"
 
 alias cdeproxy-on='ssh -fN lindev-proxy'
