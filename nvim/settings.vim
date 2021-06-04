@@ -1,3 +1,4 @@
+"set guifont=Hasklig:h10
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=number
@@ -19,8 +20,6 @@ set noshowmode
 " Undo changes even after saving a file
 set undofile
 set undodir=~/.cache/nvim/undo
-" Set session dir
-let g:prosession_dir = '~/.cache/nvim/sessions/'
 " Open new split panes to right and bottom
 set splitbelow
 set splitright

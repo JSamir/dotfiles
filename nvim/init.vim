@@ -6,6 +6,7 @@ source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/coc-fzf.vim
 source ~/.config/nvim/plugins/vim-which-key.vim
+source ~/.config/nvim/plugins/startify.vim
 source ~/.config/nvim/plugins/lightline.vim
 source ~/.config/nvim/plugins/git.vim
 source ~/.config/nvim/theme.vim
