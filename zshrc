@@ -29,7 +29,8 @@ zstyle ':z4h:autosuggestions' forward-char     'accept'
 # This makes `ssh some-host` equivalent to `command ssh some-host`.
 zstyle ':z4h:ssh:lindev'		passthrough      'no'
 zstyle ':z4h:ssh:lindev2'		passthrough      'no'
-zstyle ':z4h:ssh:lindev-noproxy'	passthrough      'no'
+zstyle ':z4h:ssh:lindev-noproxy'	passthrough      'yes'
+zstyle ':z4h:ssh:lindev-proxy'	passthrough      'yes'
 zstyle ':z4h:ssh:*'  	 		passthrough      'yes'
 
 # Move the cursor to the end when Up/Down fetches a command from history?
@@ -143,6 +144,7 @@ alias findall='sudo find / -name'
 alias cd..='cd ..'
 alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
 alias v='nvim'
+alias g='goneovim'
 alias sv='sudo nvim'
 alias vim='nvim'
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
