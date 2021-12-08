@@ -29,8 +29,8 @@ zstyle ':z4h:autosuggestions' forward-char     'accept'
 # This makes `ssh some-host` equivalent to `command ssh some-host`.
 zstyle ':z4h:ssh:lindev'		passthrough      'no'
 zstyle ':z4h:ssh:lindev2'		passthrough      'no'
-zstyle ':z4h:ssh:lindev-noproxy'	passthrough      'yes'
-zstyle ':z4h:ssh:lindev-proxy'	passthrough      'yes'
+zstyle ':z4h:ssh:lindev-noproxy'	passthrough      'no'
+zstyle ':z4h:ssh:lindev-proxy'	passthrough      'no'
 zstyle ':z4h:ssh:*'  	 		passthrough      'yes'
 
 # Move the cursor to the end when Up/Down fetches a command from history?
@@ -57,6 +57,7 @@ WORDCHARS=""
 
 # Export environment variables.
 export LANG=en_US.UTF-8
+export DOCKER_CONFIG=~/.config/docker
 export GPG_TTY=$TTY
 export BROWSER=firefox
 export EDITOR=nvim
@@ -69,9 +70,8 @@ export SAVEHIST=1000000
 export HISTFILE="${XDG_DATA_HOME}"/zsh/zsh_history
 export SDKMAN_DIR="/home/samir/.local/share/sdkman"
 export PSQLRC="/home/samir/.config/psqlrc"
-
-# Extend PATH.
-path=(~/bin $path)
+export _JAVA_AWT_WM_NONREPARENTING=1
+export UNIT_TEST_PROPERTIES=~/svn/unit-test.properties
 
 # Additional settings
 setopt INC_APPEND_HISTORY       # Write to the history file immediately, not when the shell exits.
@@ -149,11 +149,11 @@ alias sv='sudo nvim'
 alias vim='nvim'
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias mvnd="mvnd -Dmvnd.daemonStorage=$XDG_CONFIG_HOME/mvnd -gs $XDG_CONFIG_HOME/maven/settings.xml"
-alias docker="docker --config ~/.config/docker"
+#alias docker="docker --config ~/.config/docker"
 
-alias cdeproxy-on='ssh -fN lindev-proxy'
-alias cdeproxy-check='ssh -O check lindev-proxy'
-alias cdeproxy-off='ssh -O exit lindev-proxy'
+alias cdeproxy-on='command ssh -fN lindev-proxy'
+alias cdeproxy-check='command ssh -O check lindev-proxy'
+alias cdeproxy-off='command ssh -O exit lindev-proxy'
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 
