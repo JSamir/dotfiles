@@ -3,7 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+"Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'liuchengxu/vim-which-key'
 
 Plug 'junegunn/fzf', { 'dir': '~/tools/system/fzf', 'do': './install --all --xdg --no-bash --no-zsh --64' }
